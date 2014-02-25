@@ -43,7 +43,7 @@ void findStdDeviation(int array[],int inputLength,double& mean,double& stdD){
     for(int i=0; i<inputLength;i++){
         stdD +=((double)array[i]-mean)*((double)array[i]-mean);
     }
-    stdD = sqrt(stdD)/((double)inputLength-1);
+    stdD = sqrt(stdD/((double)inputLength-1));
     
     return;
     
