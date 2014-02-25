@@ -1,5 +1,7 @@
 #include <cmath>
 #include <iostream>
+#include <fstream>
+
 using namespace std;
 
 void populateArray(int array[], int& inputLength){
@@ -10,6 +12,10 @@ void populateArray(int array[], int& inputLength){
         cout<<"Input was not valid";
     }
     else{
+        if(inputLength<2 || inputLength >9000)
+        {
+            populateArray(array,inputLength);
+        }
         for(int i=0; i<inputLength;i++){
             
             int temp;
@@ -29,6 +35,33 @@ void populateArray(int array[], int& inputLength){
     return;
 }
 
+void populateArrayFromFile(int array[], int& inputLength){
+    string filename;
+    cout<<"Please input the name of the file"<<endl;
+    cin>>filename;
+    
+    ifstream fin;
+    fin.open(filename.c_str());
+    if(fin.fail()){
+        cout<<"Could not open file. Please try again."<<endl;
+        
+    }
+    else{
+        //opened file! YAY!
+        
+        //get the first number, which is expected as the length of lines-1
+        fin>>inputLength;
+        for(int i=0;i<inputLength;i++){
+            int temp;
+            fin>>temp;
+            array[i] = temp;
+            
+        }
+    }
+}
+    
+    
+    
 void findStdDeviation(int array[],int inputLength,double& mean,double& stdD){
     
     //calculate mean
