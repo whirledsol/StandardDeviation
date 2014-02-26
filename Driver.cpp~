@@ -14,7 +14,6 @@ int main(){
         int inputLength;
         int values[9000];
         populateArrayFromFile(values,inputLength);
-	//populateArray(values,inputLength);
         double stdD,mean;
         findStdDeviation(values,inputLength,mean,stdD);
         outputData(values,inputLength,mean,stdD);

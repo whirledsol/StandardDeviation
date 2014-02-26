@@ -1,0 +1,17 @@
+Script started on Tue 25 Feb 2014 11:42:45 PM EST
+]0;will@will-Lenovo: ~/stddevwill@will-Lenovo:~/stddev$ ls
+[0m[01;32ma.out[0m       Driver.cpp~          StdDeviation.h       test.txt
+Driver.cpp  StdDevFunctions.cpp  stdDeviation.script
+]0;will@will-Lenovo: ~/stddevwill@will-Lenovo:~/stddev$ g++ Driver.cpp StdDevFunctions.cpp -o StdDeviationExe c
+]0;will@will-Lenovo: ~/stddevwill@will-Lenovo:~/stddev$ ./StdDeviationExec
+Please input the name of the file
+test.txt
+/////////////////////
+OUTPUT:
+1 6 7 8 
+Standard Deviation: 3.10913
+Mean: 5.5
+]0;will@will-Lenovo: ~/stddevwill@will-Lenovo:~/stddev$ exit
+exit
+
+Script done on Tue 25 Feb 2014 11:43:27 PM EST
